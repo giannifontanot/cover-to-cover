@@ -1,6 +1,7 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Cautivados por Jesús</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<script src="ajustes.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap">
@@ -34,26 +35,6 @@
 :root{--scale:1;--track:0em}
 html{font-size:calc(16px * var(--scale))}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:calc(17px * var(--scale));line-height:1.68;letter-spacing:var(--track)}
-.gear{position:fixed;z-index:30;top:calc(env(safe-area-inset-top,0px) + 12px);right:calc(max(16px,env(safe-area-inset-right,0px)));width:38px;height:38px;padding:0;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--panel);color:var(--muted);box-shadow:0 2px 10px rgba(43,33,24,.14);opacity:.92}
-.gear:hover{opacity:1}
-.gear:hover{color:var(--wine);background:var(--ctl)}
-.gear svg{width:18px;height:18px}
-.set .card{grid-template-rows:auto 1fr}
-.set .body{overflow:auto;padding:16px 18px 18px;display:grid;gap:18px;letter-spacing:0}
-.row{display:grid;grid-template-columns:7.5rem 1fr;gap:10px;align-items:center}
-.row > label,.row > span{font-family:var(--label);font-size:13px;font-weight:600;color:var(--fg)}
-.step{display:flex;align-items:center;gap:6px;justify-self:start;background:var(--ctl);border-radius:6px;padding:3px}
-.step button{border:0;border-radius:4px;background:transparent;color:var(--fg);padding:6px 12px;line-height:1;font-family:var(--display);font-weight:600;font-size:15px}
-.step button:hover{background:var(--wash);color:var(--wine)}
-.step button:disabled{opacity:.35;cursor:default;background:transparent}
-.step output{font-family:var(--label);font-size:12.5px;color:var(--muted);min-width:4.2em;text-align:center;font-variant-numeric:tabular-nums}
-select{font:inherit;font-family:var(--label);font-size:14px;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:7px 10px;max-width:100%}
-.set .actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.set .actions button{border-radius:6px}
-.set .actions .done{background:var(--wine);color:var(--panel);border-color:var(--wine)}
-.set .actions .done:hover{color:var(--panel);opacity:.9}
-.row{grid-template-columns:1fr auto;background:var(--wash);border:1px solid var(--line);border-radius:8px;padding:8px 8px 8px 14px}
-.row .step{justify-self:end;background:var(--panel);border:1px solid var(--line)}
 .vers{display:flex;flex-wrap:wrap;gap:2px;background:var(--ctl);border-radius:6px;padding:2px}
 .vers button{border:0;border-radius:4px;padding:4px 10px;font-family:var(--label);font-size:12px;font-weight:600;color:var(--muted);background:transparent}
 .vers button[aria-pressed="true"]{background:var(--panel);color:var(--wine)}
@@ -143,21 +124,8 @@ button.ref:focus-visible{outline:2px solid var(--wine);outline-offset:2px;border
 [data-anim="page"] .pop{perspective:1200px}
 [data-anim="page"] .pop .card{transform:rotateY(-14deg) translateX(30px);transform-origin:0 50%;opacity:0}
 [data-anim="none"] .pop,[data-anim="none"] .pop .card{transition:none}
-.anim{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.anim button{border-radius:6px}
 @media (prefers-reduced-motion:reduce){.pop .card{transform:none!important}:root{--dur:150ms}}
 
-.fonts{border:0;margin:0;padding:0;display:grid;gap:8px}
-.fonts legend{font-family:var(--label);font-size:13px;font-weight:600;margin-bottom:8px;padding:0}
-label.fo[hidden]{display:none}
-.fo{display:grid;grid-template-columns:auto 2.6rem 1fr;gap:12px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:6px;cursor:pointer;background:var(--panel)}
-.fo:hover{border-color:var(--vine)}
-.fo:has(input:checked){border-color:var(--wine);background:var(--wash)}
-.fo input{accent-color:var(--wine);margin:0}
-.fo .aa{font-size:1.6rem;line-height:1;color:var(--wine);text-align:center}
-.fo .fn{display:grid;gap:2px;min-width:0}
-.fo b{font-family:var(--label);font-weight:600;font-size:14px}
-.fo small{font-family:var(--label);font-size:12.5px;color:var(--muted);line-height:1.4}
 /* corrección: el estado abierto siempre gana sobre el tipo de transición */
 :root[data-anim] .pop.on .card{transform:none;opacity:1}
 :root{--dur:380ms}
@@ -166,18 +134,9 @@ label.fo[hidden]{display:none}
 [data-anim="zoom"] .pop .card{transform:scale(.86)}
 .qs li .tag{margin-right:6px;font-size:10px;padding:2px 6px;vertical-align:2px}
 
-.fonts{grid-template-columns:repeat(3,minmax(0,1fr))}
-.fonts legend{grid-column:1/-1}
-.fo{grid-template-columns:1fr;justify-items:center;text-align:center;gap:2px;padding:10px 6px;position:relative}
-.fo input{position:absolute;opacity:0;pointer-events:none}
-.fo:has(input:focus-visible){outline:2px solid var(--wine);outline-offset:2px}
-.fo .aa{font-size:1.7rem}
-.fo b{font-size:13px}
-.fo small{font-size:11.5px}
 </style>
 
 <div class="wrap">
-<button type="button" class="gear" id="gear" aria-label="Ajustes de lectura" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button>
   <header>
     <div class="eyebrow">Un libro en diez capítulos</div>
     <h1>Cautivados por <em>Jesús</em></h1>
@@ -506,24 +465,6 @@ label.fo[hidden]{display:none}
   <footer>Citas en el texto: Dios Habla Hoy (DHH). Ventanas de citas: Versión Biblia Libre (Jonathan Gallagher, CC BY-SA 4.0), Palabra de Dios para ti (CC BY-SA 4.0), Biblia en Español Sencillo (AudioBiblia.org / Irma Flores, CC BY 4.0) y Reina-Valera 1909 (dominio público).</footer>
 </div>
 
-<div class="pop set" id="set" hidden>
-  <div class="card" role="dialog" aria-modal="true" aria-labelledby="setT">
-    <header><h2 id="setT">Ajustes de lectura</h2><button type="button" class="x" id="setX" aria-label="Cerrar">×</button></header>
-    <div class="body">
-      <fieldset class="fonts" id="fontSel"><legend>Tipo de letra</legend>
-        <label class="fo" data-k="" title="Con serif. Lectura larga y pausada; es la letra del libro."><input type="radio" name="fuente" value="" checked><span class="aa" style="font-family:'Spectral',Georgia,serif">Aa</span><b>Spectral</b><small>Con serif</small></label>
-        <label class="fo" data-k="nunito" title="Sin serif, redondeada. Limpia y amable, cansa menos la vista."><input type="radio" name="fuente" value="nunito"><span class="aa" style="font-family:'Nunito',Arial,sans-serif">Aa</span><b>Nunito</b><small>Redondeada</small></label>
-        <label class="fo" data-k="atkinson" title="Para baja visión: cada letra es inconfundible (I l 1, b d, O 0)."><input type="radio" name="fuente" value="atkinson"><span class="aa" style="font-family:'Atkinson Hyperlegible',Verdana,sans-serif">Aa</span><b>Atkinson</b><small>Baja visión</small></label>
-      </fieldset>
-      <div class="row"><span id="fsL">Tamaño</span><div class="step" role="group" aria-labelledby="fsL">
-        <button type="button" id="fsDown" aria-label="Disminuir tamaño de letra">A−</button><output id="fsVal" aria-live="polite">13 pt</output><button type="button" id="fsUp" aria-label="Aumentar tamaño de letra">A+</button></div></div>
-      <div class="row"><span id="lsL">Espacio entre letras</span><div class="step" role="group" aria-labelledby="lsL">
-        <button type="button" id="lsDown" aria-label="Reducir espacio entre letras">−</button><output id="lsVal" aria-live="polite">Normal</output><button type="button" id="lsUp" aria-label="Aumentar espacio entre letras">+</button></div></div>
-      <div class="actions"><button type="button" id="setReset">Restablecer</button><button type="button" class="done" id="setDone">Listo</button></div>
-    </div>
-  </div>
-</div>
-
 <div class="pop" id="pop" hidden>
   <div class="card" role="dialog" aria-modal="true" aria-labelledby="popRef">
     <header><div class="hd"><h2 id="popRef"></h2><div class="vers" role="group" aria-label="Versión"><button type="button" id="vVBL" data-v="vbl" aria-pressed="true" title="Versión Biblia Libre">VBL</button><button type="button" data-v="pdt" aria-pressed="false" title="Palabra de Dios para ti">PDT</button><button type="button" data-v="bes" aria-pressed="false" title="Biblia en Español Sencillo">BES</button><button type="button" data-v="rv" aria-pressed="false" title="Reina-Valera 1909">RV 1909</button></div></div><button type="button" class="x" id="popX" aria-label="Cerrar">×</button></header>
@@ -565,50 +506,6 @@ label.fo[hidden]{display:none}
   }
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){[].forEach.call(document.querySelectorAll('.pop'),function(m){if(!m.hidden)hide(m)})}});
   [].forEach.call(document.querySelectorAll('.pop'),function(m){m.addEventListener('click',function(e){if(e.target===m)hide(m)})});
-
-  /* ajustes */
-  var set=document.getElementById('set');
-  document.getElementById('gear').addEventListener('click',function(e){show(set,sel.querySelector('input:checked')||document.getElementById('setX'),e.currentTarget)});
-  document.getElementById('setX').addEventListener('click',function(){hide(set)});
-  document.getElementById('setDone').addEventListener('click',function(){hide(set)});
-  var PTS=[10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],PDEF=3,i=PDEF; /* tamaño del texto en puntos (1 pt = 4/3 px) */
-  var tracks=[-0.02,-0.01,0,0.02,0.04,0.06,0.08,0.1],j=2;
-  var sel=document.getElementById('fontSel'),font='';
-  var FONTS={nunito:{f:'"Nunito",Arial,sans-serif',web:'Nunito'},atkinson:{f:'"Atkinson Hyperlegible",Verdana,sans-serif',web:'Atkinson Hyperlegible'}};
-  var BYK=FONTS;
-  function checkFonts(){
-    if(!document.fonts||!document.fonts.load)return;
-    Object.keys(FONTS).forEach(function(k){
-      document.fonts.load('400 24px "'+FONTS[k].web+'"','Aa').then(function(l){
-        if(!l.length){var el=sel.querySelector('[data-k="'+k+'"]');if(el)el.hidden=true;if(font===k){font='';apply()}}
-      }).catch(function(){});
-    });
-  }
-  var n=PTS.indexOf(parseInt(ls('cautivados-puntos'),10));if(n>=0)i=n;
-  n=parseInt(ls('cautivados-espacio'),10);if(n>=0&&n<tracks.length)j=n;
-  var f=ls('cautivados-fuente');if(f&&BYK[f])font=f;
-  var anim='zoom'; /* transición única: acercamiento suave */
-  var fsUp=document.getElementById('fsUp'),fsDown=document.getElementById('fsDown'),fsVal=document.getElementById('fsVal');
-  var lsUp=document.getElementById('lsUp'),lsDown=document.getElementById('lsDown'),lsVal=document.getElementById('lsVal');
-  function apply(){
-    root.style.setProperty('--scale',(PTS[i]*4/3/17).toFixed(4));
-    root.style.setProperty('--track',tracks[j]+'em');
-    if(font&&BYK[font])root.style.setProperty('--reader',BYK[font].f);else root.style.removeProperty('--reader');
-    [].forEach.call(sel.querySelectorAll('input'),function(r){r.checked=(r.value===font)});
-    root.setAttribute('data-anim',anim);
-    fsVal.textContent=PTS[i]+' pt';fsDown.disabled=i===0;fsUp.disabled=i===PTS.length-1;
-    var d=j-2;lsVal.textContent=d===0?'Normal':(d>0?'+'+d:'−'+(-d));lsDown.disabled=j===0;lsUp.disabled=j===tracks.length-1;
-    ls('cautivados-puntos',String(PTS[i]));ls('cautivados-espacio',String(j));ls('cautivados-fuente',font);
-  }
-  fsUp.addEventListener('click',function(){if(i<PTS.length-1){i++;apply()}});
-  fsDown.addEventListener('click',function(){if(i>0){i--;apply()}});
-  lsUp.addEventListener('click',function(){if(j<tracks.length-1){j++;apply()}});
-  lsDown.addEventListener('click',function(){if(j>0){j--;apply()}});
-  sel.addEventListener('change',function(e){if(e.target.name==='fuente'){font=e.target.value;apply()}});
-
-  document.getElementById('setReset').addEventListener('click',function(){i=PDEF;j=2;font='';apply()});
-  apply();
-  if(document.readyState==='complete')checkFonts();else window.addEventListener('load',checkFonts);
 
   /* citas */
   var BIB=JSON.parse(document.getElementById('bib').textContent);
